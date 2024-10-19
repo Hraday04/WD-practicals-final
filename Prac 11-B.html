@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fade Effects</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background-color: #f0f0f0;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<button id="fade-in-btn">Fade In</button>
+	<button id="fade-out-btn">Fade Out</button>
+	<button id="fade-toggle-btn">Fade Toggle</button>
+	<div id="box"></div>
+
+	<script>
+		$(document).ready(function() {
+			$("#fade-in-btn").click(function() {
+				$("#box").fadeIn(1000); // Fade in over 1 second
+			});
+			
+			$("#fade-out-btn").click(function() {
+				$("#box").fadeOut(1000); // Fade out over 1 second
+			});
+			
+			$("#fade-toggle-btn").click(function() {
+				$("#box").fadeToggle(1000); // Fade toggle over 1 second
+			});
+		});
+	</script>
+</body>
+</html>

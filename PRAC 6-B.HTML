@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	<style>
+		/* Basic styling for counter layout */
+		.counter-container {
+			width: 300px;
+			margin: 50px auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+		
+		.button {
+			width: 100px;
+			height: 40px;
+			font-size: 18px;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: #fff;
+			cursor: pointer;
+		}
+		
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		
+		.count-display {
+			font-size: 48px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="counter-container">
+		<button class="button" onclick="incrementCount()">Click Me</button>
+		<div class="count-display" id="count-display">Count: 0</div>
+		
+		<script>
+			// Initialize count variable
+			let count = 0;
+			
+			// Function to increment count
+			function incrementCount() {
+				count++;
+				document.getElementById('count-display').innerHTML = 'Count: ' + count;
+			}
+		</script>
+	</div>
+</body>
+</html>
+

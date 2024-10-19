@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouse Follower</title>
+	<style>
+		/* Make the text absolutely positioned */
+		#follower {
+			position: absolute;
+			font-size: 24px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			background-color: #f0f0f0;
+			pointer-events: none;
+		}
+	</style>
+</head>
+<body>
+	<!-- The text that will follow the mouse cursor -->
+	<div id="follower"></div>
+	
+	<script>
+		// Get the follower element
+		const follower = document.getElementById('follower');
+		
+		// Set the text content of the follower
+		follower.textContent = 'Text moved by Mouse';
+		
+		// Add event listener to the document for mouse movement
+		document.addEventListener('mousemove', (event) => {
+			// Update the follower's position to match the mouse cursor
+			follower.style.top = `${event.clientY + 20}px`;
+			follower.style.left = `${event.clientX + 20}px`;
+		});
+	</script>
+</body>
+</html>
+
+
